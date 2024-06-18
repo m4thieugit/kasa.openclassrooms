@@ -1,0 +1,47 @@
+.App-page {
+    .App-main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        margin: 50px 0px 100px 0px;
+        
+        .App-main-page-title {
+            color: #FF6060;
+            font-size: 200px;
+            text-align: center;
+            margin: 0;
+        }
+        .App-main-page-subtitle {
+            color: #FF6060;
+            font-weight: 500;
+            text-align: center;
+            font-size: 36px;
+            text-wrap: balance;
+        }
+        .App-main-page-back-button {
+            color: #000000;
+            font-weight: 500;
+            text-decoration: underline;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .App-page {
+        .App-main-content {
+            .App-main-page-title {
+                font-size: 98px;
+            }
+            .App-main-page-subtitle {
+                font-size: 18px;
+            }
+            .App-main-page-back-button {
+                font-size: 14px;
+            }
+        }
+    }
+}

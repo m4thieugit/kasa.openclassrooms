@@ -1,0 +1,41 @@
+.App-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    .App-nav-logo {
+        .logo {
+            width: 200px;
+        }
+    }
+
+    .App-nav-list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: unset;
+        gap: 20px;
+        
+        .App-nav-list-link {
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-weight: 500;
+            }
+            a.active, a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .App-nav {
+        .App-nav-logo {
+            .logo {
+                width: 150px;
+            }
+        }
+    }
+}
