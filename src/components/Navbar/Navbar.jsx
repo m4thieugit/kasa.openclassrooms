@@ -1,6 +1,8 @@
 import { Component } from 'react';
-import logo from '../../assets/img/logo.svg';
+import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
+
+import logo from '../../assets/img/logo.svg';
 
 class Navbar extends Component {
     constructor(props) {
@@ -17,10 +19,10 @@ class Navbar extends Component {
                 <div className="App-nav-links">
                 <ul className="App-nav-list">
                     <li className="App-nav-list-link">
-                    <a href="/">Accueil</a>
+                        <NavLink to="/" activeClassName="active">Accueil</NavLink>
                     </li>
                     <li className="App-nav-list-link">
-                    <a href="/about">A propos</a>
+                        <NavLink to="/about" activeClassName="active">A propos</NavLink>
                     </li>
                 </ul>
                 </div>
