@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './Locations.scss';
+import Location from '../Location/Location';
 
 import logements from '../../assets/data/logements.json';
 
@@ -23,10 +24,7 @@ class Locations extends Component {
         return (
             <div className="App-main-locations">
                 {this.state.logements.map((logement, i) => 
-                    <div className="App-main-location" key={i} style={{backgroundImage: 'url(' + logement.cover + ')' }}>
-                        <div className='App-main-location-overlay'></div>
-                        <h2 className='App-main-location-title'>{logement.title}</h2>
-                    </div>
+                    <Location key={i} logement={logement}></Location>
                 )}
             </div>
         );
