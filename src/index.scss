@@ -2,12 +2,15 @@
 
 body {
   margin: 0;
+  scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App-page {
+  min-height: 100vh;
+
   header, main {
     margin: auto;
     max-width: 1240px;

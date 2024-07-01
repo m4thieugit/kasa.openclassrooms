@@ -1,0 +1,42 @@
+.App-collapse {
+    margin: auto;
+    max-width: 1100px;
+
+    .App-collapse-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: #FF6060;
+        color: #fff;
+        padding: 0px 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        position: relative;
+        z-index: 1;
+
+        .App-collapse-button {
+            font-size: 30px;
+            cursor: pointer;
+
+            i {
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+    
+    .App-collapse-body {
+        background-color: #F6F6F673;
+        border-radius: 10px 5px;
+        white-space: pre-wrap;
+        padding: 0px 30px;
+        overflow-y: hidden;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-50px);
+        max-height: 0;
+    }
+    .App-collapse-body.show {
+        transform: translateY(0px);
+        max-height: 200px;
+    }
+}
