@@ -1,4 +1,4 @@
-import { Component, useEffect } from 'react';
+import { Component } from 'react';
 import './Collapse.scss';
 
 class Collapse extends Component {
@@ -6,9 +6,6 @@ class Collapse extends Component {
         super(props);
         this.props = props;
         this.state = { status: 'close' };
-    }
-    
-    componentDidMount() {
     }
 
     handleClick = () => {
@@ -23,15 +20,6 @@ class Collapse extends Component {
                 this.setState({ status: 'close' });
                 break;
         }
-    }
-
-    handleClickNext = () => {
-        if (this.state.current_position + 1 >= this.props.pictures.length) {
-            this.state.current_position = 0;
-        } else {
-            this.state.current_position = this.state.current_position + 1;
-        }
-        this.setState({ current_position: this.state.current_position });
     }
 
     render() {
