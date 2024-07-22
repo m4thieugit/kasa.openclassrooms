@@ -1,4 +1,4 @@
-import { Component, useEffect } from 'react';
+import { Component } from 'react';
 import './Carousel.scss';
 
 class Carousel extends Component {
@@ -13,21 +13,17 @@ class Carousel extends Component {
     }
 
     handleClickPrevious = () => {
-        if (this.state.current_position - 1 < 0) {
-            this.state.current_position = this.props.pictures.length - 1;
-        } else {
-            this.state.current_position = this.state.current_position - 1;
-        }
-        this.setState({ current_position: this.state.current_position });
+        this.setState((state) => {
+            const new_position = state.current_position - 1 < 0 ? this.props.pictures.length - 1 : state.current_position - 1;
+            return { current_position: new_position };
+        });
     }
 
     handleClickNext = () => {
-        if (this.state.current_position + 1 >= this.props.pictures.length) {
-            this.state.current_position = 0;
-        } else {
-            this.state.current_position = this.state.current_position + 1;
-        }
-        this.setState({ current_position: this.state.current_position });
+        this.setState((state) => {
+            const new_position = state.current_position + 1 >= this.props.pictures.length ? 0 : state.current_position + 1;
+            return { current_position: new_position };
+        });
     }
 
     render() {
