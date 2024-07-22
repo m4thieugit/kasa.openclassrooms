@@ -1,0 +1,125 @@
+.App-page {
+    header {
+        margin-bottom: 0px;
+    }
+    .lodgement-main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .lodgement-title-description,
+        .lodgement-description-author-notation {
+            flex-direction: column;
+        }
+
+        .lodgement-title-description {
+            display: flex;
+            flex-direction: column;
+
+            .lodgement-title {
+                color: #FF6060;
+                font-weight: 500;
+                margin: 0;
+            }
+        
+            .lodgement-location {
+                font-size: 18px;
+                font-weight: 500;
+                text-align: left;
+                margin: 0;
+                margin-top: 10px;
+            }
+        
+            .lodgement-tags {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+        }
+
+        .lodgement-description-host-notation {
+            display: flex;
+            flex-direction: column;
+
+            .lodgement-host {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                justify-content: right;
+
+                .lodgement-host-name {
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-align: right;
+                    color: #FF6060;
+                    width: min-content;
+                    margin: 0;
+                }
+
+                .lodgement-host-image {
+                    border-radius: 50px;
+                    height: 64px;
+                    width: 64px;
+                }
+            }
+
+            .lodgement-notation {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                justify-content: right;
+
+                .star {
+                    font-size: 24px;
+                }
+                .star-red {
+                    color: #FF6060;
+                }
+                .star-grey {
+                    color: #E3E3E3;
+                }
+            }
+        }
+    }
+
+    .lodgement-description-collapses {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 70px;
+
+        .App-collapse {
+            width: 50%;
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .App-page {
+        .lodgement-main-content {
+            flex-direction: column;
+
+            .lodgement-description-host-notation {
+                margin-top: 20px;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+        }
+
+        .lodgement-description-collapses {
+            flex-direction: column;
+            gap: 40px;
+
+            .App-collapse {
+                width: 100%;
+            }
+        }
+    }
+}
